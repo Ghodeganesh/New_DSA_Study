@@ -5,15 +5,15 @@ using namespace std;
 int main()
 {
     // cout<<"Hello";
-    int arr[] = {1, 2, 3, 4, 3, 1, 10, 2, 4};
+    int arr[] = {1, 2, 3, 4, 5, 6};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Original Array: " << endl;
 
-    for (int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    // for (int i = 0; i < size; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
     cout << endl;
 
     // solution 1
@@ -33,16 +33,11 @@ int main()
     //  ans=1^4^4 ---> 4  gets cancelled
     //  ans=1 ---> 4  gets cancelled
 
-    map<int, int> m;
-
-    for (int it : arr)
+    for (int i = 0; i < size; i++)
     {
-        m[it]++;
-    }
-
-    for (int it : arr)
-    {
-        if (m[it] == 1)
-            cout << m[it];
+        for (int j = size-1; j>=0; j--)
+        {
+            cout << arr[i] << " "<< arr[j] <<endl;
+        }
     }
 }
