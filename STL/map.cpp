@@ -23,6 +23,8 @@ int main()
    cout << m.count(2); 
    cout<<endl;
 
+   cout<< (*m)->first;
+
     if(m.find(2) !=m.end()){
         cout<<"Present";
     }else{
