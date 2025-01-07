@@ -23,31 +23,36 @@ int main()
     }
     cout << endl;
     cout << "spiral printing: " << endl;
-    
-     while (count > 0) {
+
+    while (count > 0)
+    {
         // Traverse from left to right
-        for (int i = left; i <= right && count > 0; i++) {
+        for (int i = left; i <= right && count > 0; i++)
+        {
             cout << arr[top][i] << " ";
             count--;
         }
         top++;
 
         // Traverse from top to bottom
-        for (int i = top; i <= bottom && count > 0; i++) {
+        for (int i = top; i <= bottom && count > 0; i++)
+        {
             cout << arr[i][right] << " ";
             count--;
         }
         right--;
 
         // Traverse from right to left
-        for (int i = right; i >= left && count > 0; i--) {
-        cout << arr[bottom][i] << " ";
+        for (int i = right; i >= left && count > 0; i--)
+        {
+            cout << arr[bottom][i] << " ";
             count--;
         }
         bottom--;
 
         // Traverse from bottom to top
-        for (int i = bottom; i >= top && count > 0; i--) {
+        for (int i = bottom; i >= top && count > 0; i--)
+        {
             cout << arr[i][left] << " ";
             count--;
         }
